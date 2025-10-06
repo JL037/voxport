@@ -1,0 +1,104 @@
+VoxPort Commercial License
+Version 1.0 — © 2025 Jared Lemler
+
+───────────────────────────────────────────────
+OVERVIEW
+───────────────────────────────────────────────
+This License governs use of the VoxPort software (the “Software”) in
+closed-source, proprietary, or commercial environments. It is offered
+as an alternative to the open-source Apache License, Version 2.0, under
+a dual-licensing model maintained by Jared Lemler (“Licensor”).
+
+This license allows companies, organizations, and individuals to use
+VoxPort in proprietary systems or commercial offerings without being
+bound by the conditions of the open-source Apache License, provided
+that a commercial agreement is executed with the Licensor.
+
+───────────────────────────────────────────────
+1. GRANT OF LICENSE
+───────────────────────────────────────────────
+Subject to payment and a signed commercial agreement with the Licensor,
+Licensee is granted a non-exclusive, non-transferable, worldwide
+license to:
+
+  • Use, modify, and distribute the Software as part of proprietary or
+    commercial products and services.
+
+  • Remove or replace VoxPort trademarks, logos, and attributions,
+    provided such removal is explicitly authorized in writing.
+
+  • Receive optional support, updates, or warranties as defined in a
+    separate commercial agreement or order form.
+
+───────────────────────────────────────────────
+2. RESTRICTIONS
+───────────────────────────────────────────────
+Unless expressly permitted by the Licensor in writing, Licensee may not:
+
+  • Sublicense, sell, rent, or redistribute the Software except as
+    permitted by a commercial agreement.
+
+  • Misrepresent the origin of the Software or claim ownership of it.
+
+  • Use the Software in a way that competes directly with VoxPort or
+    any hosted service offered by the Licensor.
+
+  • Remove copyright notices without written authorization.
+
+───────────────────────────────────────────────
+3. OWNERSHIP AND INTELLECTUAL PROPERTY
+───────────────────────────────────────────────
+The Software and all related intellectual property are and shall remain
+the exclusive property of Jared Lemler. No ownership rights are
+transferred to Licensee under this License.
+
+All rights not expressly granted are reserved by the Licensor.
+
+───────────────────────────────────────────────
+4. WARRANTY DISCLAIMER AND LIMITATION OF LIABILITY
+───────────────────────────────────────────────
+THE SOFTWARE IS PROVIDED “AS IS” AND WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED. TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE LICENSOR
+DISCLAIMS ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO IMPLIED
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NON-INFRINGEMENT.
+
+IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY DAMAGES (INCLUDING,
+WITHOUT LIMITATION, LOST PROFITS, BUSINESS INTERRUPTION, OR LOSS OF
+INFORMATION) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE,
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+───────────────────────────────────────────────
+5. TERMINATION
+───────────────────────────────────────────────
+This License terminates automatically if Licensee fails to comply with
+its terms. Upon termination, Licensee must immediately stop using and
+distributing the Software and destroy all copies in its possession.
+
+Termination does not limit any other remedies available to the Licensor.
+
+───────────────────────────────────────────────
+6. CONTACT AND INQUIRIES
+───────────────────────────────────────────────
+Commercial licensing, white-label inquiries, and support requests:
+
+  • GitHub Profile : https://github.com/JL037
+  • Project Issues : https://github.com/JL037/voxport/issues
+
+All formal correspondence should be directed through these channels
+until an official domain contact (e.g., hello@voxport.dev) is established.
+
+───────────────────────────────────────────────
+7. SUMMARY
+───────────────────────────────────────────────
+• VoxPort is dual-licensed:
+    – Open Source users follow the Apache License 2.0 (see LICENSE).
+    – Commercial users must obtain a commercial license for proprietary use.
+
+• The dual-license model ensures VoxPort remains open and interoperable
+  with the AT Protocol community while allowing sustainable commercial
+  development and managed hosting options.
+
+───────────────────────────────────────────────
+END OF TERMS
+───────────────────────────────────────────────
