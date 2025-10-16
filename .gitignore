@@ -1,0 +1,61 @@
+# ───────────────────────────────
+# Node / PNPM / Build tools
+# ───────────────────────────────
+node_modules/
+.pnpm-store/
+.pnpm-debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.tsbuildinfo
+dist/
+.eslintcache
+
+# Turbo / Changesets
+.turbo/
+# DO NOT ignore .changeset — those markdowns are required until you run `changeset version`
+# .changeset/   ← keep tracked
+
+# Test outputs
+coverage/
+.nyc_output/
+.vitest/
+.vscode-test/
+
+# Examples (if they produce artifacts)
+examples/**/dist/
+examples/**/node_modules/
+
+# ───────────────────────────────
+# Env & local dev
+# ───────────────────────────────
+.env
+.env.*
+.envrc
+# Keep template for onboarding
+!.env.example
+
+# ───────────────────────────────
+# Editors / OS cruft
+# ───────────────────────────────
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.orig
+*.bak
+.Spotlight-V100
+.Trashes
+
+# ───────────────────────────────
+# Misc
+# ───────────────────────────────
+*.log
+*.tmp
+*.pid
+*.seed
+*.local
