@@ -5,7 +5,11 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist", "src", "README.md"],
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsup src/**/*.ts --format esm --dts",
     "dev": "tsup --watch",
@@ -13,10 +17,15 @@
     "typecheck": "tsc -b"
   },
   "exports": {
-    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" }
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
   },
   "sideEffects": false,
   "dependencies": {
-    "@atproto/api": "^0.13.14"
+    "@atproto/api": "^0.13.35",
+    "@atproto/lexicon": "^0.5.1",
+    "@atproto/xrpc": "^0.7.5"
   }
 }
