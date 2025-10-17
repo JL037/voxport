@@ -14,7 +14,8 @@
     "build": "tsup src/**/*.ts --format esm --dts",
     "dev": "tsup --watch",
     "lint": "eslint .",
-    "typecheck": "tsc -b"
+    "typecheck": "tsc -b",
+    "test": "vitest run"
   },
   "exports": {
     ".": {
