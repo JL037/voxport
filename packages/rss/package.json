@@ -11,8 +11,8 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsup src/**/*.ts --format esm --dts",
-    "dev": "tsup --watch",
+    "build": "tsup src/index.ts --format esm --clean && tsc -p tsconfig.json --emitDeclarationOnly",
+    "dev": "tsup src/index.ts --watch",
     "lint": "eslint .",
     "typecheck": "tsc -b",
     "test": "vitest run"
@@ -25,6 +25,7 @@
   },
   "sideEffects": false,
   "dependencies": {
-    "entities": "^7.0.0"
+    "entities": "^7.0.0",
+    "xmlbuilder2": "^4.0.0"
   }
 }

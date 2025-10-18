@@ -1,10 +1,37 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "dist",
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "rootDir": ".",
+    "outDir": "dist",
+
+    "declaration": true,
+    "declarationMap": true,
+
+    "strict": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "resolveJsonModule": true,           // <-- allow importing .json
     "types": ["vitest/globals"]
   },
-  "include": ["src", "tests"],
+  "include": [
+    "src/**/*.ts",
+    "tests/**/*.ts"
+  ],
+  "files": [
+    "src/index.ts",
+    "src/app.voxport.series.ts",
+    "src/app.voxport.episode.ts"
+  ],
+  "exclude": [
+    "dist",
+    "tests"
+  ],
   "references": []
 }
+

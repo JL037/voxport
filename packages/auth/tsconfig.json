@@ -1,12 +1,30 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "outDir": "dist",
     "rootDir": ".",
+
+    "declaration": true,
+    "declarationMap": true,
+
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "types": ["vitest/globals"]
   },
-  "include": ["src", "tests"],
+  "include": ["src/**/*.ts"],
+  "exclude": ["dist", "tests"],
   "references": [
     { "path": "../utils" }
+  ],
+  "files": [
+    "src/index.ts",
+    "src/jwt.ts",
+    "src/proofs.ts",
+    "src/did.ts"
   ]
 }
