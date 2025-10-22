@@ -39,7 +39,7 @@ jobs:
 
       # Lint (if configured)
       - name: Lint
-        run: pnpm lint --if-present
+        run: pnpm lint
 
       # Typecheck
       - name: Typecheck
@@ -47,7 +47,7 @@ jobs:
 
       # Test
       - name: Test
-        run: pnpm test --if-present
+        run: pnpm test
 
       # Build (Turbo)
       - name: Build
