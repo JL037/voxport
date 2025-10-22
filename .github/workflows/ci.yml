@@ -6,7 +6,6 @@ on:
   pull_request:
     branches: [main]
 
-# Define shared environment
 env:
   CI: true
 
@@ -16,48 +15,45 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout your repo so the runner has your files
+      # Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Setup Node.js
-      # Use Node 20 (your project standard)
+      # Setup pnpm FIRST (before Node)
+      # This installs pnpm globally and makes it available in PATH
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.18.3
+          run_install: false  # We'll run pnpm install manually later
+
+      # Setup Node.js (after pnpm is ready)
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'pnpm'
 
-      # Setup pnpm
-      # Ensures same version used locally
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10.18.3
-
-      # Install dependencies
-      # Uses pnpm workspace to install all packages
+      # Install dependencies (monorepo aware)
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      # Lint your code
-      # (If you have ESLint configured)
+      # Lint (if configured)
       - name: Lint
-        run: pnpm lint
+        run: pnpm lint --if-present
 
-      # Typecheck all packages
+      # Typecheck
       - name: Typecheck
         run: pnpm typecheck
 
-      # Run tests (vitest / jest / etc.)
+      # Test
       - name: Test
         run: pnpm test --if-present
 
-      # Build all packages with Turbo
+      # Build (Turbo)
       - name: Build
         run: pnpm build
 
-      # Changeset version check
-      # Ensures versioning workflow remains clean
+      # Check Changesets
       - name: Check Changesets
         run: pnpm changeset status
