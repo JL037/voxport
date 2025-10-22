@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Define shared environment
+env:
+  CI: true
+
+jobs:
+  build:
+    name: Build and Validate
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout your repo so the runner has your files
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Setup Node.js
+      # Use Node 20 (your project standard)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      # Setup pnpm
+      # Ensures same version used locally
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.18.3
+
+      # Install dependencies
+      # Uses pnpm workspace to install all packages
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # Lint your code
+      # (If you have ESLint configured)
+      - name: Lint
+        run: pnpm lint
+
+      # Typecheck all packages
+      - name: Typecheck
+        run: pnpm typecheck
+
+      # Run tests (vitest / jest / etc.)
+      - name: Test
+        run: pnpm test --if-present
+
+      # Build all packages with Turbo
+      - name: Build
+        run: pnpm build
+
+      # Changeset version check
+      # Ensures versioning workflow remains clean
+      - name: Check Changesets
+        run: pnpm changeset status
